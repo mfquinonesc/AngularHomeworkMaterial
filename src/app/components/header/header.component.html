@@ -1,0 +1,41 @@
+<div class="navbar">
+    <div id="logo" class="logo hide">
+        <p class="logo-pizza">* PIZZA *</p>
+        <p class="logo-title">VINCENT</p>
+        <p class="logo-year">1890</p>
+        <p class="logo-lemma">FAMILY PIZZERIA</p>
+    </div>
+</div>
+
+<nav class="navbar">
+    <div class="menu-pad">
+        <ul>
+            <li>
+                <p>VINCENT PIZZA</p>
+            </li>           
+            <button mat-button [matMenuTriggerFor] ="beforeMenu" id="btn-pad">☰</button>
+            <mat-menu #beforeMenu="matMenu" xPosition="before" class="mat_menu">
+               <button mat-menu-item>HOME</button>
+               <button mat-menu-item>MENU</button>
+               <button mat-menu-item>SHOP</button>
+               <button mat-menu-item>CONTACT</button>
+               <button mat-menu-item>ABOUT</button>
+            </mat-menu>
+        </ul>
+    </div>
+    <div id="menu" class="menu-bar hide">
+        <ul>
+            <li><a href="#">HOME</a></li>            
+            <li><button mat-button [matMenuTriggerFor] ="afterMenu" class="nav-menu-item-btn">MENU</button>
+                <mat-menu #afterMenu="matMenu" class="nav-menu-list">
+                    <button mat-menu-item>PIZZAS</button>
+                    <button mat-menu-item>PASTAS</button>
+                    <button mat-menu-item>DRINKS</button>
+                </mat-menu>
+            </li>
+            <li><a href="#shop">SHOP</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="#about">ABOUT</a></li>
+        </ul>
+    </div>
+</nav>
